@@ -1,0 +1,10 @@
+services:
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    restart: always
+    env_file:
+      - ./backend/env.env
+    volumes:
+      - ./backend:/backend
